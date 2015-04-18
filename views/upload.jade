@@ -1,0 +1,17 @@
+extends layout
+block content
+    p Form to Upload College Data:
+    form#fileUpload(method="POST" action="/uploads/infoCollege" enctype="multipart/form-data")
+        label(for="importHolder") Select a file to upload:
+        input(type='hidden', name='_csrf', value=_csrf)
+        input#importHolder(type="file" name="fileToUpload")
+        br
+        input(type='submit')
+    hr
+    p Form to Upload Gender Information
+    form#fileUpload(method="POST" action="/uploads/genderInfo" enctype="multipart/form-data")
+        label(for="importHolder") Select a file to upload:
+        input(type='hidden', name='_csrf', value=_csrf)
+        input#importHolder(type="file" name="fileToUpload")
+        br
+        input(type='submit')

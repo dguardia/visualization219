@@ -1,0 +1,18 @@
+extends layout
+block content
+    .row
+        .col-md-6
+            table.table.table-bordered.text-left
+                thead
+                    h3.alert-info.text-center.well-lg Info for #{title}
+                each val, key in college
+                    tr
+                        td.lead=key
+                        td=val
+        .col-md-5.col-md-offset-1
+            table.table.table-bordered.text-left
+                thead
+                    h3.alert-info.text-center.well-lg College Gender Distribution
+                    tr
+                        td#chart.label-success
+                        script(src='/js/visuals.js')
