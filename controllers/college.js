@@ -54,7 +54,27 @@ exports.genderInformation = function(req, res){
         }
 
     })
-}
+};
+
+exports.topcolleges = function (req, res, next) {
+    College.find({}).select('GENDER')
+        .exec(function (err, topcolleges) {
+        if (err) {
+            console.log('err', err);
+            ifErr(err);
+        } else {
+            if(topcolleges){
+               var readvalue = topcolleges.forEach(function(value)
+                {
+                    console.log(value);
+                })
+            }
+            res.render('topcolleges', {
+                colleges: topcolleges
+            });
+        }
+    });
+};
 
 
 

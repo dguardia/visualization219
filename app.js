@@ -118,6 +118,7 @@ app.post('/uploads/infoCollege', uploadController.parseCSV, uploadController.inf
 app.get('/college/:id/gender-information', collegeController.genderInformation);
 app.post('/uploads/genderInfo', uploadController.parseCSV, uploadController.genderInformation);
 
+app.get('/topcolleges', collegeController.topcolleges);
 app.get('/colleges', collegeController.index);
 app.get('/college/:id', collegeController.getCollegeById);
 /**

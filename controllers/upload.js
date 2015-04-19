@@ -78,3 +78,26 @@ var genderInformationQuery = function(unitID, data, row){
         genderInfo.save();
     })
 };
+
+exports.totalEnrollments = function(req, res){
+    var data = req.parseData;
+    var numbRows = data.length;
+
+    for(var row = 1; row < numbRows; row++){
+        var unitID = data[row][0];
+        totalEnrrollmentQuery(unitID, data, row);
+    }
+    res.redirect('/colleges');
+
+};
+
+var totalEnrrollmentQuery = function(unitID, data, row){
+
+    College.findOne({UNITID: unitID}, function(err, genderInfo){
+        genderInfo.TOTAL = {
+            'total': data[row][6]
+        };
+        console.log(genderInfo);
+        genderInfo.save();
+    })
+};
