@@ -8,23 +8,19 @@ var ifErr = function(err, callback){
     console.log(err);
 };
 
-exports.index = function(req, res){
-
-        College.find({ }).select('_id INSTNM').lean()
-            .exec(function(err, colleges){
-                if(err){
-                    ifErr(err);
-                    console.log('err', err);
-                } else {
-                    mongoose.connection.close();
-
-                    res.render('collegelist', {
-                        title: 'College List',
-                        colleges: colleges
-                    });
-                }
-            });
+exports.index = function(req, res, next) {
+        College.find({}).select('_id INSTNM').lean().exec(function(err, colleges) {
+            if (err) {
+                console.log('err', err);
+                ifErr(err);
+            } else {
+                res.render('collegelist', {
+                    colleges: colleges
+                });
+            }
+        });
 };
+
 
 exports.getCollegeById = function(req, res){
   var id = req.params.id;

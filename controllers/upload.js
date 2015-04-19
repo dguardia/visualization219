@@ -48,11 +48,10 @@ exports.infoCollege = function(req, res){
             college[data[0][col]] = data[row][col];
         }
 
-        var collegeDocuments = new College(college);
-        collegeDocuments.save();
-        console.log(college);
+    var collegeDocuments = new College(college);
+    collegeDocuments.save();
+    console.log(collegeDocuments);
     }
-    mongoose.connection.close();
     res.redirect('/colleges');
 };
 
@@ -62,10 +61,8 @@ exports.genderInformation = function(req, res){
 
     for(var row = 1; row < numbRows; row++){
         var unitID = data[row][0];
-        console.log(unitID);
         genderInformationQuery(unitID, data, row);
     }
-    mongoose.connection.close();
     res.redirect('/colleges');
 
 };
@@ -77,6 +74,7 @@ var genderInformationQuery = function(unitID, data, row){
             'male': [data[row][8]],
             'female': [data[row][10]]
         };
+        console.log(genderInfo);
         genderInfo.save();
     })
 };
