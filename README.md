@@ -1,4 +1,4 @@
-[Alt](https://lh4.googleusercontent.com/-PVw-ZUM9vV8/UuWeH51os0I/AAAAAAAAD6M/0Ikg7viJftQ/w1286-h566-no/hackathon-starter-logo.jpg)
+(https://lh4.googleusercontent.com/-PVw-ZUM9vV8/UuWeH51os0I/AAAAAAAAD6M/0Ikg7viJftQ/w1286-h566-no/hackathon-starter-logo.jpg)
 Hackathon Starter [![Dependency Status](https://david-dm.org/sahat/hackathon-starter/status.svg?style=flat)](https://david-dm.org/sahat/hackathon-starter) [![Build Status](http://img.shields.io/travis/sahat/hackathon-starter.svg?style=flat)](https://travis-ci.org/sahat/hackathon-starter) [![Analytics](https://ga-beacon.appspot.com/UA-47447818-2/hackathon-starter?pixel)](https://github.com/igrigorik/ga-beacon)
 =======================
 
@@ -24,19 +24,10 @@ if for example you are only interested in **Sign in with Google** authentication
 Chances are you do not need all authentication methods or API examples. As of **Hackathon Starter 2.1**
 it is possible to selectively check which authentication methods you need by running `node setup.js`.
 
-<h4 align="center">Modern Theme</h4>
 
 <h4 align="center">Flatly Bootstrap Theme</h4>
 
 ![](https://lh5.googleusercontent.com/-oJ-7bSYisRY/U1a-WhK_LoI/AAAAAAAAECM/a04fVYgefzw/w1474-h1098-no/Screen+Shot+2014-04-22+at+3.08.33+PM.png)
-
-<h4 align="center">API Examples</h4>
-
-![](https://lh5.googleusercontent.com/-BJD2wK8CvC8/VLodBsyL-NI/AAAAAAAAEx0/SafE6o_qq_I/w1818-h1186-no/Screenshot%2B2015-01-17%2B00.25.49.png)
-
-<h4 align="center">Hackathon Starter Generator</h4>
-
-![](https://lh4.googleusercontent.com/-ncBLUzq6czE/U3KkYE0UXsI/AAAAAAAAEEM/YsZeIqOlZg8/w1288-h874-no/Screenshot+2014-05-13+19.01.15.png)
 
 Table of Contents
 -----------------
