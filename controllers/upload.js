@@ -85,6 +85,7 @@ exports.totalEnrollments = function(req, res){
 
     for(var row = 1; row < numbRows; row++){
         var unitID = data[row][0];
+
         totalEnrrollmentQuery(unitID, data, row);
     }
     res.redirect('/colleges');
@@ -93,11 +94,9 @@ exports.totalEnrollments = function(req, res){
 
 var totalEnrrollmentQuery = function(unitID, data, row){
 
-    College.findOne({UNITID: unitID}, function(err, genderInfo){
-        genderInfo.TOTAL = {
-            'total': data[row][6]
-        };
-        console.log(genderInfo);
-        genderInfo.save();
+    College.findOne({UNITID: unitID}, function(err, total){
+        total.TOTAL = data[row][6];
+        console.log(total);
+        total.save();
     })
 };

@@ -4,5 +4,11 @@ block content
    table.table.table-hover
       each college in colleges
          tr
-            td
-               a(href='/college/#{college._id}') #{college}
+            td=college.INSTNM
+            td=college.TOTAL
+
+      p
+         #topten.label-success
+         script(src='/js/lib/c3.min.js')
+         script(src='/js/lib/d3.min.js')
+         script(src='/js/lib/topten.js')

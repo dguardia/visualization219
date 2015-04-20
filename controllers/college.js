@@ -56,15 +56,15 @@ exports.genderInformation = function(req, res){
     })
 };
 
-exports.topcolleges = function (req, res, next) {
-    College.find({}).select('GENDER')
+exports.topcolleges = function (req, res) {
+    College.find({}).sort({TOTAL: -1}).limit(10)
         .exec(function (err, topcolleges) {
         if (err) {
             console.log('err', err);
             ifErr(err);
         } else {
             if(topcolleges){
-               var readvalue = topcolleges.forEach(function(value)
+               topcolleges.forEach(function(value)
                 {
                     console.log(value);
                 })
@@ -76,6 +76,31 @@ exports.topcolleges = function (req, res, next) {
     });
 };
 
+exports.topten = function(req, res){
+
+    College.find({}).sort({TOTAL: -1}).limit(10)
+        .exec(function (err, topten) {
+            if (err) {
+                console.log('err', err);
+            } else {
+                if(topten){
+                    var college = [];
+                    for (var i = 0, len = topten.length; i < len; i++){
+
+                        var holder = [topten[i].TOTAL];
+                        college.push(holder);
+                        console.log(holder);
+                        console.log(college);
+                    }
+                    console.log(college);
+                    res.send(college);
+                } else {
+                    console.log("Not total data");
+                }
+
+            }
+        });
+};
 
 
 
