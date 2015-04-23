@@ -112,17 +112,20 @@ app.post('/account/password', passportConf.isAuthenticated, userController.postU
 app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConf.isAuthenticated, userController.getOauthUnlink);
 
+/**
+ * This part handle the program Visualization
+ */
 app.get('/upload', uploadController.index);
 app.post('/uploads/infoCollege', uploadController.parseCSV, uploadController.infoCollege);
-
 app.get('/college/:id/gender-information', collegeController.genderInformation);
 app.post('/uploads/genderInfo', uploadController.parseCSV, uploadController.genderInformation);
-
 app.post('/uploads/totalEnrollments', uploadController.parseCSV, uploadController.totalEnrollments);
 app.get('/topcolleges', collegeController.topcolleges);
 app.get('/colleges', collegeController.index);
 app.get('/college/:id', collegeController.getCollegeById);
 app.get('/colleges/topten', collegeController.topten);
+
+
 /**
  * API examples routes.
  */

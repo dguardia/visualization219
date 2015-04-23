@@ -48,3 +48,19 @@ describe('GET /random-url', function() {
       .expect(404, done);
   });
 });
+
+describe('GET /colleges', function(){
+  it('should return 200 OK', function(done){
+    request(app)
+        .get('/colleges')
+        .expect(200, done);
+  })
+});
+
+describe('GET /topcolleges', function(){
+  it('should return 200 OK', function(done){
+    request(app)
+        .get('/topcolleges')
+        .expect(200, done);
+  })
+});
