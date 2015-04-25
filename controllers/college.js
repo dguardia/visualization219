@@ -102,7 +102,25 @@ exports.topten = function(req, res){
         });
 };
 
+exports.getTuitionInfo = function(req, res){
+  var id = req.params.id;
+  College.findOne({_id: id}, 'TUITION',  function(err, mydoc){
+      if(err){
+          console.log(err)
+      } else {
+          if(mydoc.TUITION && mydoc.TUITION.length != 0){
+              res.send({
+                  title: 'Enrollment by Year',
+                  tuition: mydoc.TUITION
+              });
+          } else {
+              res.send('This college does not have tuition');
+              res.end();
+          }
+      }
 
+  })
+};
 
 
 

@@ -37,3 +37,12 @@ var chart = c3.generate({
     }
 });
 
+var tuitionchart = c3.generate({
+    bindto: '#tuitionchart',
+    data: {
+        url: window.location.href + '/tuition',
+        mimeType: 'json',
+        type: 'bar'
+    },
+
+});

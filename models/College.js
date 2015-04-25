@@ -75,7 +75,8 @@ var collegeSchema = new mongoose.Schema({
     LATITUDE: Number,
     __v: Number,
     GENDER: Object,
-    TOTAL: Number
+    TOTAL: Number,
+    TUITION: Array
 });
 
 var College = mongoose.model('College', collegeSchema);

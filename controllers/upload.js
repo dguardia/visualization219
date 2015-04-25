@@ -100,3 +100,76 @@ var totalEnrrollmentQuery = function(unitID, data, row){
         total.save();
     })
 };
+
+exports.tuitionByYear = function(req, res){
+    var data = req.parseData;
+    var numbRows = data.length;
+    var fileName = req.files.fileToUpload.originalname;
+    var year;
+
+    if(fileName.indexOf('2013') != -1){
+        year = 2013;
+    } else if(fileName.indexOf('2012') != -1){
+        year = 2012;
+    } else if(fileName.indexOf('2011') != -1){
+        year = 2011;
+    }
+    console.log(year);
+
+    for(var row = 1; row < numbRows; row++){
+        var unitId = data[row][0];
+        processTuition(unitId, data, row, year)
+    }
+    res.redirect('/colleges');
+
+};
+var processTuition = function(unitId, data, row, year){
+    College.findOne({UNITID: unitId}, function(err, myDoc){
+        if(err){
+            console.log(err)
+        }
+        if(myDoc){
+            if(isNaN(data[row][1]))
+            if(!myDoc.TUITION){
+                myDoc.TUITION = []
+            }
+            myDoc.TUITION.push(Number(data[row][1]));
+            myDoc.save()
+
+        } else {
+            console.log('unitID: ', unitId, "does not exits")
+        }
+
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

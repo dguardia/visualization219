@@ -115,15 +115,18 @@ app.get('/account/unlink/:provider', passportConf.isAuthenticated, userControlle
 /**
  * This part handle the program Visualization
  */
-app.get('/upload', uploadController.index);
 app.post('/uploads/infoCollege', uploadController.parseCSV, uploadController.infoCollege);
-app.get('/college/:id/gender-information', collegeController.genderInformation);
 app.post('/uploads/genderInfo', uploadController.parseCSV, uploadController.genderInformation);
 app.post('/uploads/totalEnrollments', uploadController.parseCSV, uploadController.totalEnrollments);
-app.get('/topcolleges', collegeController.topcolleges);
+app.post('/uploads/tuitionByYear', uploadController.parseCSV, uploadController.tuitionByYear);
+
+app.get('/upload', uploadController.index);
 app.get('/colleges', collegeController.index);
-app.get('/college/:id', collegeController.getCollegeById);
 app.get('/colleges/topten', collegeController.topten);
+app.get('/topcolleges', collegeController.topcolleges);
+app.get('/college/:id/gender-information', collegeController.genderInformation);
+app.get('/college/:id/tuition', collegeController.getTuitionInfo);
+app.get('/college/:id', collegeController.getCollegeById);
 
 
 /**

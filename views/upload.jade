@@ -23,3 +23,11 @@ block content
         input#importHolder(type="file" name="fileToUpload")
         br
         input(type='submit')
+    hr
+    p Form to Upload Tuition by Year
+    form#fileUpload(method="POST" action="/uploads/tuitionByYear" enctype="multipart/form-data")
+        label(for="importHolder") Select a file to upload:
+        input(type='hidden', name='_csrf', value=_csrf)
+        input#importHolder(type="file" name="fileToUpload")
+        br
+        input(type='submit')
