@@ -1,6 +1,6 @@
 Visualization Project
 =======================
-
+[![Build Status](https://travis-ci.org/dguardia/visualization219.svg)](https://travis-ci.org/dguardia/visualization219)
 <h4 align="center">Visualization for Class IS219 </h4>
 <h5 align="center">Using Hackaton Boirlerplate</h5>
 
