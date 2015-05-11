@@ -64,15 +64,15 @@ module.exports = {
   },
 
   github: {
-    clientID: process.env.GITHUB_ID || 'cb448b1d4f0c743a1e36',
-    clientSecret: process.env.GITHUB_SECRET || '815aa4606f476444691c5f1c16b9c70da6714dc6',
+    clientID: process.env.GITHUB_ID || 'cc49d5f4b9ee8207a13a',
+    clientSecret: process.env.GITHUB_SECRET || 'a437b5b362c6bf72c3c85917004a888b0801f503',
     callbackURL: '/auth/github/callback',
     passReqToCallback: true
   },
 
   twitter: {
-    consumerKey: process.env.TWITTER_KEY || '6NNBDyJ2TavL407A3lWxPFKBI',
-    consumerSecret: process.env.TWITTER_SECRET  || 'ZHaYyK3DQCqv49Z9ofsYdqiUgeoICyh6uoBgFfu7OeYC7wTQKa',
+    consumerKey: process.env.TWITTER_KEY || 'wU2ATa4wb3i2X8YCcDDSDC0Me',
+    consumerSecret: process.env.TWITTER_SECRET  || '5Y1we8hkQLUl7wu7nlBagDrExuXBHeMnyCn5nSzzllGi6evB6v',
     callbackURL: '/auth/twitter/callback',
     passReqToCallback: true
   },
@@ -85,8 +85,8 @@ module.exports = {
   },
 
   linkedin: {
-    clientID: process.env.LINKEDIN_ID || '77chexmowru601',
-    clientSecret: process.env.LINKEDIN_SECRET || 'szdC8lN2s2SuMSy8',
+    clientID: process.env.LINKEDIN_ID || '770922ujvl1hl6',
+    clientSecret: process.env.LINKEDIN_SECRET || '5wHnFI51U4M1CanB',
     callbackURL: process.env.LINKEDIN_CALLBACK_URL || 'http://localhost:3000/auth/linkedin/callback',
     scope: ['r_fullprofile', 'r_emailaddress', 'r_network'],
     passReqToCallback: true
@@ -102,7 +102,7 @@ module.exports = {
   },
 
   clockwork: {
-    apiKey: process.env.CLOCKWORK_KEY || '9ffb267f88df55762f74ba2f517a66dc8bedac5a'
+    apiKey: process.env.CLOCKWORK_KEY || '69b8d544350755a405fefcf239d008b2c05bb2f1'
   },
 
   stripe: {

@@ -1,17 +1,23 @@
 extends layout
 
 block content
-  h1 Visualization Project
-  p.lead This project for IS219 - NJIT 2015 Spring
+  h1.text-center
+    i.fa.fa-paw
+    | Visualization Project
+    p.lead This project for IS219 - NJIT 2015 Spring
   hr
   .row
     .col-sm-6
-      h2 College Information
-      p From here you will get to the list of Colleges
-      p
+      h2.text-center
+        i.fa.fa-info
+        | College Information
+      p.text-center  From here you will get to the list of Colleges
+      p.text-center
         a.btn.btn-default(href='/colleges', role='button') View details »
     .col-sm-6
-      h2 Top 10 Colleges
-      p The list of the top 10 colleges
-      p
+      h2.text-center
+        i.fa.fa-bar-chart
+        | Top 10 Colleges
+      p.text-center The list of the top 10 colleges
+      p.text-center
         a.btn.btn-default(href='/topcolleges', role='button') View details »

@@ -1,5 +1,7 @@
 var request = require('supertest');
+var assert = require('assert');
 var app = require('../app.js');
+var controllers = require('../controllers/college.js');
 
 describe('GET /', function() {
   it('should return 200 OK', function(done) {

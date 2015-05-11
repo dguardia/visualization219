@@ -1,10 +1,10 @@
 var secrets = require('../config/secrets');
 var nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
-  service: 'SendGrid',
+  service: 'Mandrill',
   auth: {
-    user: secrets.sendgrid.user,
-    pass: secrets.sendgrid.password
+    user: secrets.mandrill.user,
+    pass: secrets.mandrill.password
   }
 });
 
@@ -38,7 +38,7 @@ exports.postContact = function(req, res) {
   var name = req.body.name;
   var body = req.body.message;
   var to = 'your@email.com';
-  var subject = 'Contact Form | Hackathon Starter';
+  var subject = 'Contact Form | Visualize Project';
 
   var mailOptions = {
     to: to,
