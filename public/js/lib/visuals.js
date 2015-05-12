@@ -43,6 +43,6 @@ var tuitionchart = c3.generate({
         url: window.location.href + '/tuition',
         mimeType: 'json',
         type: 'bar'
-    },
+    }
 
 });
